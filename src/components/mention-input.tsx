@@ -136,6 +136,7 @@ const MentionInput: FC<MentionInputProps> = (
         .map(renderMentionSuggestions)
       }
 
+      {/* @ts-ignore */}
       <PasteInput
         multiline
 
