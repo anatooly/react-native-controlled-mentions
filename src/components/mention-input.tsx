@@ -6,6 +6,7 @@ import {
   TextInputSelectionChangeEventData,
   View,
 } from 'react-native';
+import PasteInput from '@mattermost/react-native-paste-input'
 
 import { MentionInputProps, MentionPartType, Suggestion } from '../types';
 import {
@@ -135,7 +136,7 @@ const MentionInput: FC<MentionInputProps> = (
         .map(renderMentionSuggestions)
       }
 
-      <TextInput
+      <PasteInput
         multiline
 
         {...textInputProps}
@@ -157,7 +158,7 @@ const MentionInput: FC<MentionInputProps> = (
             <Text key={index}>{text}</Text>
           ))}
         </Text>
-      </TextInput>
+      </PasteInput>
 
       {(partTypes
         .filter(one => (
